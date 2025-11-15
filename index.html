@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Classroom - A Websérie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A;
+            /* slate-900 */
+            color: #CBD5E1;
+            /* slate-300 */
+        }
+
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 1) 80%), url('https://placehold.co/1920x1080/1e293b/475569?text=Cena+da+Sala+de+Aula') no-repeat center center;
+            background-size: cover;
+        }
+
+        .modal-video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .modal-video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Header -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-slate-900/90 to-transparent transition-all duration-300"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-black text-amber-400">THE CLASSROOM</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#inicio"
+                        class="text-sm font-medium text-slate-200 hover:text-amber-400 transition-colors">Início</a>
+                    <a href="#episodios"
+                        class="text-sm font-medium text-slate-200 hover:text-amber-400 transition-colors">Episódios</a>
+                    <a href="#sobre"
+                        class="text-sm font-medium text-slate-200 hover:text-amber-400 transition-colors">Sobre</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section id="inicio" class="hero-bg pt-16">
+        <!-- Conteúdo Hero -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="max-w-xl">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight">
+                    The <span class="text-amber-400">Classroom</span>
+                </h1>
+                <p class="mt-6 text-lg text-slate-200 max-w-prose">
+                    Uma websérie sobre provas, trabalhos inúteis e a batalha diária pelo último lugar no fundão.
+                </p>
+                <div class="mt-8">
+                    <!-- DESCRIÇÃO EP 1 ATUALIZADA -->
+                    <button
+                        onclick="openModal(1, 'Piloto', 'Lucca decide que é de azar de Enzo e prega pegadinha idiotas nele durante o dia.', 'https://drive.google.com/file/d/19KQtlIh_BtM3yOtJq1uQWFhLxP_4DYrs/preview')"
+                        class="inline-flex items-center justify-center px-8 py-3 bg-amber-400 text-slate-900 font-bold rounded-md shadow-lg text-lg hover:bg-amber-300 transition-colors duration-300">
+                        ▶ Assistir Episódio 1
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Episódios -->
+    <section id="episodios" class="py-16 sm:py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-10">Episódios</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+                <!-- Card Episódio 1 (DRIVE) - DESCRIÇÃO ATUALIZADA -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105 group cursor-pointer"
+                    onclick="openModal(1, 'Piloto', 'Lucca decide que é de azar de Enzo e prega pegadinha idiotas nele durante o dia.', 'https://drive.google.com/file/d/19KQtlIh_BtM3yOtJq1uQWFhLxP_4DYrs/preview')">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/334155/eab308?text=EPISÓDIO+1" alt="Episódio 1: Piloto"
+                            class="w-full h-auto transition-opacity duration-300 group-hover:opacity-80">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-white">1. Piloto</h3>
+                    </div>
+                </div>
+
+                <!-- Card Episódio 2 (DRIVE) - DESCRIÇÃO ATUALIZADA -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105 group cursor-pointer"
+                    onclick="openModal(2, 'O Bolo', 'Maju faz uma festa surpresa para Isa, mas nada da certa (absolutamente nada)', 'https://drive.google.com/file/d/1trGqPHKKMj4mIRGetg8Ac16ZYDYPZvnI/preview')">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/334155/eab308?text=EPISÓDIO+2" alt="Episódio 2: O Bolo"
+                            class="w-full h-auto transition-opacity duration-300 group-hover:opacity-80">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-white">2. O Bolo</h3>
+                    </div>
+                </div>
+
+                <!-- Card Episódio 3 (DRIVE) - DESCRIÇÃO ATUALIZADA -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105 group cursor-pointer"
+                    onclick="openModal(3, 'Blog', 'Maju Magalhães inventa de fazer um Blog sobre o Oscar Steam, mas nada funciona, já que ninguem tem fé.', 'https://drive.google.com/file/d/1zIQsSUxIKZA5DiB_gNKoOx7dmyjVNwzQ/preview')">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/334155/eab308?text=EPISÓDIO+3" alt="Episódio 3: Blog"
+                            class="w-full h-auto transition-opacity duration-300 group-hover:opacity-80">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-white">3. Blog</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="py-16 sm:py-24 bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Sobre "The Classroom"</h2>
+                <p class="text-lg text-slate-300 mb-4">
+                    "The Classroom" é uma websérie de comédia independente que segue a rotina de uma sala de aula...
+                    peculiar.
+                </p>
+                <p class="text-lg text-slate-300">
+                    Se você já sobreviveu a uma reunião de pais que poderia ter sido um e-mail, essa série é para você.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400">
+            <p>&copy; 2024 The Classroom. Todos os direitos (provavelmente) reservados.</p>
+        </div>
+    </footer>
+
+
+    <!-- Modal do Player -->
+    <div id="videoModal"
+        class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 hidden"
+        onclick="closeModal()">
+        <div class="bg-slate-900 rounded-lg shadow-2xl w-full max-w-4xl overflow-hidden"
+            onclick="event.stopPropagation()">
+
+            <!-- Header do Modal -->
+            <div class="flex justify-between items-center p-4 border-b border-slate-700">
+                <h3 id="modalTitle" class="text-xl font-bold text-white"></h3>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Player de Vídeo -->
+            <div class="modal-video-wrapper" id="videoContainer">
+                <!-- O iframe será inserido aqui pelo JS -->
+            </div>
+
+            <!-- Descrição -->
+            <div class="p-6">
+                <!-- A descrição é inserida aqui pelo JS -->
+                <p id="modalDescription" class="text-slate-300 mb-4"></p>
+                <p id="autoplayInfo" class="text-sm text-slate-400 italic hidden">
+                    ℹ️ O vídeo inicia automaticamente sem som. Clique no ícone de volume no player para ativar o áudio.
+                    </pos>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Controle do Navbar ---
+        const navbar = document.getElementById('navbar');
+        window.onscroll = () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-slate-900/90', 'backdrop-blur-sm');
+                navbar.classList.remove('from-slate-900/90', 'to-transparent');
+            } else {
+                navbar.classList.remove('bg-slate-900/90', 'backdrop-blur-sm');
+                navbar.classList.add('from-slate-900/90', 'to-transparent');
+            }
+        };
+
+        // --- Controle do Modal ---
+        const modal = document.getElementById('videoModal');
+        const videoContainer = document.getElementById('videoContainer');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const autoplayInfo = document.getElementById('autoplayInfo');
+
+        function openModal(ep, title, description, videoUrl) {
+            modalTitle.textContent = `Episódio ${ep}: ${title}`;
+            // A nova descrição é passada por esta variável e inserida no HTML
+            modalDescription.textContent = description;
+
+            let videoSrc = videoUrl;
+            let allowPermissions = "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+
+            if (videoUrl.includes('drive.google.com')) {
+                videoSrc = videoUrl;
+                autoplayInfo.classList.add('hidden');
+
+            } else if (videoUrl.includes('youtube.com')) {
+                videoSrc = `${videoUrl}?autoplay=1&mute=1&modestbranding=1&rel=0`;
+                allowPermissions += "; autoplay";
+                autoplayInfo.classList.remove('hidden');
+            }
+
+            videoContainer.innerHTML = `
+                <iframe src="${videoSrc}" 
+                        frameborder="0" 
+                        allow="${allowPermissions}" 
+                        allowfullscreen>
+                </iframe>
+            `;
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            videoContainer.innerHTML = '';
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+
+</body>
+
+</html>
